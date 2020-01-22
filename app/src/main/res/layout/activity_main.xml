@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/quan_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUANTITY"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@id/zero_text_view"
+        android:layout_below="@id/quan_text_view"
+        android:text="+"
+        android:onClick="increment" />
+
+    <TextView
+        android:id="@+id/zero_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="16sp"
+        android:layout_below="@id/plus_button" />
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:layout_below="@id/zero_text_view"
+        android:layout_above="@id/pri_text_view"
+        android:layout_marginBottom="16dp"
+        android:onClick="decrement"/>
+
+    <TextView
+        android:id="@+id/pri_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/minus_button"/>
+
+    <TextView
+        android:id="@+id/Price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/pri_text_view"/>
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Price_text_view"
+        android:onClick="submitOrder"
+        android:text="ORDER" />
+
+</LinearLayout>
