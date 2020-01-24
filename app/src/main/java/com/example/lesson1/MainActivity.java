@@ -39,9 +39,19 @@ public class MainActivity extends AppCompatActivity {
      This method is called when the order is clicked.
      */
     public void submitOrder(View view) {
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+        String priceMessage = "Total: $" + numberOfCoffees * 5;
+        priceMessage = priceMessage + "\nThank you!";
+        displayMessage(priceMessage);
     }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.Price_text_view);
+        priceTextView.setText(message);
+    }
+
     /**
 
      This method displays the given quantity value on screen.
